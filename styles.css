@@ -1,156 +1,152 @@
-increase image size and reduce size of left content :* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
+header {
     background-color: white;
-    padding: 10px 30px;
-    border-bottom: 1px solid #ccc;
-    align-items: center;
-}
-
-.navbar .logo img {
-    width: 100px;
-}
-
-.nav-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #000;
-}
-
-.lang-options a {
-    margin-left: 15px;
-    color: #000;
-}
-
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #fff;
-}
-
-/* Adjusted flexbox layout for content and image */
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Decreased text size for the left content */
-.left-content {
-    max-width: 50%; /* Reduce space for text */
-    
-}
-
-/* Increased the size of the cards section */
-.cards {
-    max-width: 45%; /* Increase the image container size */
-}
-
-/* Ensure image inside cards div is bigger */
-.cards img {
-    max-width: 1024px;
-    max-height: 1024px; /* Slightly increase image size */
-}
-
-
-.left-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.left-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.left-content button {
     padding: 10px 20px;
-    background-color: #007eb6;
-    color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content img {
+    height: 40px;
+}
+
+.header-content .fdic-text {
+    font-size: 0.8em;
+    color: #555;
+    margin-left: 10px;
+}
+
+.header-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: white;
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav li a.open-account {
+    color: #0056b3;
+}
+
+.notification {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.credit-card-info {
+    width: 60%;
+}
+
+.credit-card-info h2 {
+    font-size: 1.8em;
+}
+
+.credit-card-info p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.credit-card-info button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    margin-top: 20px;
 }
 
 .cards img {
-    width: 150px;
-    margin: 10px;
+    width: 120px;
+    margin-right: 10px;
 }
 
-.login-section {
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-radius: 10px;
+.login-form {
+    background-color: white;
+    padding: 20px;
     width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-section h2 {
-    font-size: 1.5em;
+.login-form h3 {
     margin-bottom: 20px;
 }
 
-.login-section form {
+.login-form form {
     display: flex;
     flex-direction: column;
 }
 
-.login-section input {
-    margin-bottom: 15px;
+.login-form input {
+    margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.login-section button {
+.login-form button {
+    background-color: #0056b3;
+    color: white;
     padding: 10px;
-    background-color: #007eb6;
-    color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .remember-me {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-}
-
-.remember-me label {
-    margin-left: 10px;
-}
-
-.additional-options, .passwordless {
-    margin-top: 10px;
-}
-
-.additional-options a, .passwordless a {
-    text-decoration: none;
-    color: #007eb6;
-    font-size: 0.9em;
+    margin-bottom: 20px;
 }
 
 .footer-links {
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    padding: 20px;
-    border-top: 1px solid #ccc;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
 }
 
 .footer-links a {
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #007eb6;
+    color: #0056b3;
 }
