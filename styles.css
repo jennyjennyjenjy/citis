@@ -1,186 +1,136 @@
-/* styles.css */
+/* Basic styling for the body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: white;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-}
-
+/* Header styling */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-content img {
-    height: 40px;
-}
-
-.header-content .fdic-text {
-    font-size: 0.8em;
-    color: #555;
-    margin-left: 10px;
-    flex-grow: 1;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-links a {
-    margin-left: 20px;
+    margin-left: 15px;
     text-decoration: none;
-    color: #0056b3;
+    color: #0072c6;
 }
 
+/* Navigation bar */
 nav ul {
+    list-style-type: none;
     display: flex;
-    list-style: none;
-    background-color: white;
-    margin: 0;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0;
+    background-color: #0072c6;
 }
 
-nav li {
-    margin-right: 20px;
+nav ul li {
+    margin: 0 15px;
 }
 
-nav li a {
+nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #fff;
 }
 
-nav li a.open-account {
-    color: #0056b3;
-    font-weight: bold;
-}
-
+/* Notification styling */
 .notification {
-    background-color: #f8f9fa;
+    background-color: #f1f1f1;
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
 }
 
-main {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 80px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
+/* Main content styling */
 .content {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap: 40px;
+    padding: 20px;
 }
 
+/* Credit card info */
 .credit-card-info {
-    width: 60%;
     flex: 1;
-    min-width: 300px;
+    margin-right: 20px;
 }
 
-.credit-card-info h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.credit-card-info p {
-    font-size: 1em;
-    margin-top: 10px;
-}
-
-.credit-card-info button {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
+/* Centering the card image */
 .cards {
     display: flex;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 200px;           /* Adjust this value as needed */
 }
 
 .cards img {
-    width: 120px;
-    align: center;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Login form styling */
 .login-form {
-    background-color: white;
+    flex: 0.4;
+    background-color: #fff;
     padding: 20px;
-    width: 30%;
-    min-width: 280px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .login-form h3 {
-    margin-bottom: 20px;
+    margin-top: 0;
 }
 
-.login-form form {
-    display: flex;
-    flex-direction: column;
+.login-form label {
+    display: block;
+    margin-top: 10px;
 }
 
-.login-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
     border-radius: 5px;
-    font-size: 1em;
+    border: 1px solid #ddd;
 }
 
 .login-form button {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px;
+    background-color: #0072c6;
+    color: #fff;
     border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-    margin-bottom: 20px;
 }
 
-.remember-me {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.additional-links {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9em;
-}
-
-.passwordless-sign-on {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #0056b3;
-    text-decoration: none;
-}
-
+/* Error message styling */
 .error-message {
     background-color: #f8d7da;
     color: #721c24;
-    padding: 10px;
     border: 1px solid #f5c6cb;
+    padding: 10px;
     border-radius: 5px;
-   
+    margin-bottom: 10px;
+}
+
+/* Spinner styling */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0072c6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(
