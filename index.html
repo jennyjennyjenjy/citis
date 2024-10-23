@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,18 +34,23 @@
     <main>
         <div class="content">
             <div class="credit-card-info">
-                <h2>Choose the right Citi<sup>®</sup> <br> credit card for you</h2>
-                <p>Whether you want Cash Back, Great Airline Miles, Rewards for <br> Costco Members, or a Low Intro Rate, the choice is all yours.</p>
+                <h2>Choose the right Citi<sup>®</sup> credit card for you</h2>
+                <p>Whether you want Cash Back, Great Airline Miles, Rewards for Costco Members, or a Low Intro Rate, the choice is all yours.</p>
                 <button>Learn More</button>
                 <div class="cards">
-                    <img src="citi-new-cards.png" alt="Custom Cash Card">
+                    <img src="custom-cash-card.png" alt="Custom Cash Card">
+                    <img src="aadvantage-card.png" alt="AAdvantage Card">
+                    <img src="visa-card.png" alt="Visa Card">
+                    <img src="diamond-preferred-card.png" alt="Diamond Preferred Card">
                 </div>
             </div>
             <div class="login-form">
                 <h3>Sign On</h3>
+                <!-- Error message placeholder -->
                 <div class="error-message" id="error-message" style="display: none;">
-                    <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br> Contact Support : <a href="18664097152">+1-866-409-7152</a></p>
+                    Error: Invalid User ID or Password.
                 </div>
+                <!-- Spinner placeholder -->
                 <div class="spinner" id="spinner" style="display: none;"></div>
                 <form id="login-form">
                     <label for="user-id">User ID</label>
@@ -77,21 +83,24 @@
     </footer>
 
     <script>
+        // JavaScript function to validate the form
         function validateForm() {
             const userId = document.getElementById('user-id').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
             const spinner = document.getElementById('spinner');
 
+            // Hide error message and show spinner
             errorMessage.style.display = 'none';
             spinner.style.display = 'block';
 
+            // Simulate a delay to show the error message after 3 seconds
             setTimeout(() => {
                 spinner.style.display = 'none';
                 if (userId === '' || password === '') {
                     errorMessage.style.display = 'block';
                 } else {
-                    alert('Form submitted successfully!');
+                    alert('Form submitted successfully!'); // Simulate form submission
                 }
             }, 3000);
         }
