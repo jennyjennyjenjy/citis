@@ -176,33 +176,17 @@ main {
     text-decoration: none;
 }
 
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
 .footer-links {
     background-color: #f8f9fa;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-}
-
-.footer-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #0056b3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .credit-card-info,
-    .login-form {
-        width: 100%;
-    }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+    text-align:
