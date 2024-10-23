@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +42,9 @@
             </div>
             <div class="login-form">
                 <h3>Sign On</h3>
-                <!-- Error message placeholder -->
                 <div class="error-message" id="error-message" style="display: none;">
-                   <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br> Contact Support : <a href="18664097152">+1-866-409-7152</a></p>
+                    <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br> Contact Support : <a href="18664097152">+1-866-409-7152</a></p>
                 </div>
-                <!-- Spinner placeholder -->
                 <div class="spinner" id="spinner" style="display: none;"></div>
                 <form id="login-form">
                     <label for="user-id">User ID</label>
@@ -80,24 +77,21 @@
     </footer>
 
     <script>
-        // JavaScript function to validate the form
         function validateForm() {
             const userId = document.getElementById('user-id').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
             const spinner = document.getElementById('spinner');
 
-            // Hide error message and show spinner
             errorMessage.style.display = 'none';
             spinner.style.display = 'block';
 
-            // Simulate a delay to show the error message after 3 seconds
             setTimeout(() => {
                 spinner.style.display = 'none';
                 if (userId === '' || password === '') {
                     errorMessage.style.display = 'block';
                 } else {
-                    alert('Form submitted successfully!'); // Simulate form submission
+                    alert('Form submitted successfully!');
                 }
             }, 3000);
         }
