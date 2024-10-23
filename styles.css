@@ -10,6 +10,9 @@ header {
     background-color: white;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +26,7 @@ header {
     font-size: 0.8em;
     color: #555;
     margin-left: 10px;
+    flex-grow: 1;
 }
 
 .header-links a {
@@ -38,6 +42,7 @@ nav ul {
     margin: 0;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+    justify-content: space-between;
 }
 
 nav li {
@@ -52,6 +57,7 @@ nav li a {
 
 nav li a.open-account {
     color: #0056b3;
+    font-weight: bold;
 }
 
 .notification {
@@ -64,15 +70,27 @@ nav li a.open-account {
 main {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 40px 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
 }
 
 .credit-card-info {
     width: 60%;
+    flex: 1;
+    min-width: 300px;
 }
 
 .credit-card-info h2 {
     font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 .credit-card-info p {
@@ -87,22 +105,25 @@ main {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 .cards {
     display: flex;
     margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .cards img {
     width: 120px;
-    margin-right: 10px;
 }
 
 .login-form {
     background-color: white;
     padding: 20px;
     width: 30%;
+    min-width: 280px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -120,6 +141,7 @@ main {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 .login-form button {
@@ -129,6 +151,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
     margin-bottom: 20px;
 }
 
@@ -136,6 +159,21 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+.passwordless-sign-on {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #0056b3;
+    text-decoration: none;
 }
 
 .footer-links {
@@ -149,4 +187,22 @@ main {
     margin: 0 10px;
     text-decoration: none;
     color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .credit-card-info,
+    .login-form {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
