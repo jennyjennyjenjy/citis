@@ -116,7 +116,7 @@ main {
 }
 
 .cards img {
-    width: 120px;
+    width: cover;
 }
 
 .login-form {
