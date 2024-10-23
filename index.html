@@ -46,7 +46,11 @@
             </div>
             <div class="login-form">
                 <h3>Sign On</h3>
-                <form>
+                <!-- Error message placeholder -->
+                <div class="error-message" id="error-message" style="display: none;">
+                    Error: Invalid User ID or Password.
+                </div>
+                <form id="login-form">
                     <label for="user-id">User ID</label>
                     <input type="text" id="user-id" placeholder="User ID">
                     <label for="password">Password</label>
@@ -55,7 +59,7 @@
                         <input type="checkbox" id="remember-user-id">
                         <label for="remember-user-id">Remember User ID</label>
                     </div>
-                    <button type="submit">Sign On</button>
+                    <button type="button" onclick="validateForm()">Sign On</button>
                     <div class="additional-links">
                         <a href="#">Register / Activate</a>
                         <a href="#">Forgot User ID or Password</a>
@@ -75,5 +79,23 @@
             <a href="#">Small Business</a>
         </div>
     </footer>
+
+    <script>
+        // JavaScript function to validate the form
+        function validateForm() {
+            const userId = document.getElementById('user-id').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            
+            if (userId === '' || password === '') {
+                // Show the error message if either field is empty
+                errorMessage.style.display = 'block';
+            } else {
+                // Hide the error message if fields are not empty (submit the form here if needed)
+                errorMessage.style.display = 'none';
+                alert('Form submitted successfully!'); // This line simulates a form submission
+            }
+        }
+    </script>
 </body>
 </html>
