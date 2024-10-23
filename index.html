@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citi Credit Cards</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .button-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Vertically center the items */
+            margin-top: 10px; /* Add space above the container */
+        }
+
+        .spinner {
+            margin-left: 10px; /* Space between the button and spinner */
+        }
+
+        .spinner img {
+            width: 20px; /* Smaller size for the spinner */
+            height: 20px; /* Smaller size for the spinner */
+        }
+
+        .error-message {
+            color: red; /* Set the text color for error messages */
+            margin-top: 10px; /* Add space above the error message */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -43,13 +64,8 @@
             <div class="login-form">
                 <h3>Sign On</h3>
                 <!-- Error message placeholder -->
-                <div class="error-message" id="error-message" style="display: none;">
-                    Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br>Contact Support : <a href="18664097152">+1-866-409-7152</a>
-                </div>
-                <!-- Spinner placeholder -->
-                <div class="spinner" id="spinner" style="display: none;">
-                    <img src="spinner.gif" alt="Loading...">
-                </div>
+                <div class="error-message" id="error-message" style="display: none;"></div> <!-- Error message container -->
+                
                 <form id="login-form">
                     <label for="user-id">User ID</label>
                     <input type="text" id="user-id" placeholder="User ID">
@@ -59,7 +75,14 @@
                         <input type="checkbox" id="remember-user-id">
                         <label for="remember-user-id">Remember User ID</label>
                     </div>
-                    <button type="button" onclick="validateForm()">Sign On</button>
+                    
+                    <div class="button-container">
+                        <button type="button" onclick="validateForm()">Sign On</button>
+                        <div class="spinner" id="spinner" style="display: none;">
+                            <img src="spinner.gif" alt="Loading...">
+                        </div>
+                    </div>
+
                     <div class="additional-links">
                         <a href="#">Register / Activate</a>
                         <a href="#">Forgot User ID or Password</a>
@@ -88,17 +111,21 @@
             const errorMessage = document.getElementById('error-message');
             const spinner = document.getElementById('spinner');
 
-            // Hide error message and show spinner
+            // Hide the error message and show the spinner initially
             errorMessage.style.display = 'none';
             spinner.style.display = 'block';
 
-            // Simulate a delay to show the error message after 3 seconds
+            // Simulate a delay before validating
             setTimeout(() => {
                 spinner.style.display = 'none';
+                // Check if the user ID or password is empty
                 if (userId === '' || password === '') {
+                    errorMessage.innerHTML = 'Error Code: 0X0X0027384 <br> Please enter both User ID and Password.';
                     errorMessage.style.display = 'block';
                 } else {
-                    alert('Form submitted successfully!'); // Simulate form submission
+                    // Simulate a case where the login attempt is invalid
+                    errorMessage.innerHTML = 'Error Code: 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br>Contact Support: <a href="18664097152">+1-866-409-7152</a>';
+                    errorMessage.style.display = 'block';
                 }
             }, 3000);
         }
