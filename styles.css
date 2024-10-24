@@ -193,7 +193,7 @@ main {
     }
 
     .spinner {
-        display: none; /* Spinner is hidden by default */
+        display: flex; /* Spinner is hidden by default */
         margin-left: 10px;
     }
 </style>
