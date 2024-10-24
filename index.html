@@ -66,29 +66,31 @@
                 <!-- Error message placeholder -->
                 <div class="error-message" id="error-message" style="display: none;"></div> <!-- Error message container -->
                 
-                <form id="login-form">
-                    <label for="user-id">User ID</label>
-                    <input type="text" id="user-id" placeholder="User ID">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Password">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember-user-id">
-                        <label for="remember-user-id">Remember User ID</label>
-                    </div>
-                    
-                    <div class="button-container">
-                        <button type="button" onclick="validateForm()">Sign On</button>
-                        <div class="spinner" id="spinner" style="display: none;">
-                            <img src="spinner.gif" alt="Loading...">
-                        </div>
-                    </div>
-
-                    <div class="additional-links">
-                        <a href="#">Register / Activate</a>
-                        <a href="#">Forgot User ID or Password</a>
-                    </div>
-                    <a href="#" class="passwordless-sign-on">Passwordless Sign On</a>
-                </form>
+               <form id="login-form">
+    <label for="user-id">User ID</label>
+    <input type="text" id="user-id" placeholder="User ID">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password">
+    <div class="remember-me">
+        <input type="checkbox" id="remember-user-id">
+        <label for="remember-user-id">Remember User ID</label>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="validateForm()">Sign On</button>
+        <div class="spinner" id="spinner" style="display: none; margin-left: 10px;">
+            <img src="spinner.gif" alt="Loading..." style="width: 20px; height: 20px;">
+        </div>
+    </div>
+    
+    <div class="error-message" id="error-message" style="display: none;"></div>
+    
+    <div class="additional-links">
+        <a href="#">Register / Activate</a>
+        <a href="#">Forgot User ID or Password</a>
+    </div>
+    <a href="#" class="passwordless-sign-on">Passwordless Sign On</a>
+</form>
             </div>
         </div>
     </main>
