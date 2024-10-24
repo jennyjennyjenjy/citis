@@ -153,7 +153,17 @@ main {
     cursor: pointer;
     font-size: 1em;
     margin-bottom: 20px;
-    width:cover;
+    width: 100%; /* Make the button cover the full width */
+    text-align: center; /* Center the text */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button container */
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px; /* Optional, if you want some space between the button and spinner */
+
 }
 
 .remember-me {
