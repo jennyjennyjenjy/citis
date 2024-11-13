@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citi Credit Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .button-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Vertically center the items */
+            margin-top: 10px; /* Add space above the container */
+        }
+
+        .spinner {
+            margin-left: 10px; /* Space between the button and spinner */
+        }
+
+        .spinner img {
+            width: 20px; /* Smaller size for the spinner */
+            height: 20px; /* Smaller size for the spinner */
+        }
+
+        .error-message {
+            color: red; /* Set the text color for error messages */
+            margin-top: 10px; /* Add space above the error message */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="citi-logo.png" alt="Citi Logo">
+            <span class="fdic-text">FDIC Insured – Backed by the full faith and credit of the U.S. Government</span>
+            <div class="header-links">
+                <a href="#">ATM / BRANCH</a>
+                <a href="#">ESPAÑOL</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Credit Cards</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Lending</a></li>
+            <li><a href="#">Investing</a></li>
+            <li><a href="#">Wealth Management</a></li>
+            <li><a href="#" class="open-account">Open an Account</a></li>
+        </ul>
+    </nav>
+    <div class="notification">
+        <p>Our thoughts are with those impacted by the recent hurricanes. For account assistance, please call the number on your card or statement.</p>
+    </div>
+    <main>
+        <div class="content">
+            <div class="credit-card-info">
+                <h2>Choose the right Citi<sup>®</sup> <br> credit card for you</h2>
+                <p>Whether you want Cash Back, Great Airline Miles, Rewards for <br> Costco Members, or a Low Intro Rate, the choice is all yours.</p>
+                <button>Learn More</button>
+                <div class="cards">
+                    <img src="citi-new-cards.png" alt="Custom Cash Card">
+                </div>
+            </div>
+            <div class="login-form">
+                <h3>Sign On</h3>
+                <!-- Error message placeholder -->
+                <div class="error-message" id="error-message" style="display: none;"></div> <!-- Error message container -->
+                
+               <form id="login-form">
+    <label for="user-id">User ID</label>
+    <input type="text" id="user-id" placeholder="User ID">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password">
+    <div class="remember-me">
+        <input type="checkbox" id="remember-user-id">
+        <label for="remember-user-id">Remember User ID</label>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="validateForm()">Sign On</button>
+        <div class="spinner" id="spinner" style="display: none; margin-left: 10px;">
+            <img src="spinner.gif" alt="Loading..." style="width: 20px; height: 20px;">
+        </div>
+    </div>
+    
+    <div class="error-message" id="error-message" style="display: none;"></div>
+    
+    <div class="additional-links">
+        <a href="#">Register / Activate</a>
+        <a href="#">Forgot User ID or Password</a>
+    </div>
+    <a href="#" class="passwordless-sign-on">Passwordless Sign On</a>
+</form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Credit Cards</a>
+            <a href="#">Checking Solutions</a>
+            <a href="#">Mortgage</a>
+            <a href="#">Personal Loans</a>
+            <a href="#">Investing Options</a>
+            <a href="#">Small Business</a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript function to validate the form
+        function validateForm() {
+            const userId = document.getElementById('user-id').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const spinner = document.getElementById('spinner');
+
+            // Hide the error message and show the spinner initially
+            errorMessage.style.display = 'none';
+            spinner.style.display = 'block';
+
+            // Simulate a delay before validating
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                // Check if the user ID or password is empty
+                if (userId === '' || password === '') {
+                    errorMessage.innerHTML = 'Invalid user Id and password. Enter valid Id and password ';
+                    errorMessage.style.display = 'block';
+                } else {
+                    // Simulate a case where the login attempt is invalid
+                    errorMessage.innerHTML = 'Error Code: 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br>Contact Support: <a href="18664097152">+1-866-409-7152</a>';
+                    errorMessage.style.display = 'block';
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
